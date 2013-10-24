@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="utf-8">
+    <title>Install a nappy extension</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .navbar-main {
+      width: 480px;
+      right: 0;
+      left: 0;
+      top: 0;
+      border-width: 0 0 1px;
+      padding-right: 0;
+      padding-left: 0;
+      -webkit-border-radius: 0;
+         -moz-border-radius: 0;
+              border-radius: 0;
+      -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+         -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+    <div class="tabbable">
+      <div class="navbar navbar-inverse navbar-main"> <div class="navbar-inner">
+      <a class="brand" href="#">nappy</a>
+      <ul class="nav">
+        <li class="active"> <a href="#install" data-toggle="tab">
+             <i class="icon-plus icon-white"></i> Install
+        </a> </li>
+        <li> <a href="#manage" data-toggle="tab" id="manage-list">
+             <i class="icon-list icon-white"></i> Extensions
+        </a> </li>
+        <li> <a href="#settings" data-toggle="tab">
+            <i class="icon-wrench icon-white"></i> Settings
+        </a> </li>
+      </ul>
+      </div> </div>
+
+      <div class="fluid-row span6" id="status">
+      </div>
+
+      <div class="tab-content container-fluid">
+        <div class="tab-pane active" id="install">
+          <form id="extension-install" class="input-append fluid-row">
+          <input type="text"
+                 id="extension-install-url"
+                 placeholder="http://nappy.io/extension.js"></input>
+          <button type="submit" class="btn"
+                  id="extension-install-button">Install</button>
+          </form>
+        </div>
+        <!----------------------------------------------------------------!>
+        <div class="tab-pane" id="manage">
+          <table class="table table-hover table-condensed">
+          <thead>
+            <tr>
+              <td></td>
+              <td>Extension</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody id="extension-list">
+          </tbody>
+          </table>
+        </div>
+        <!----------------------------------------------------------------!>
+        <div class="tab-pane" id="settings">
+          <p> General settings...</p>
+        </div>
+        <!----------------------------------------------------------------!>
+      </div>
+    </div>
+
+  </body>
+</html>
